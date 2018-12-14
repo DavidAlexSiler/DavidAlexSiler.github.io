@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>alex's amazing a-website.</title>
+        <style>
+            body {
+                background: rgb(52, 60, 81);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: monospace;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+            
+            /* navigation menu */
+            nav {
+                background: rgb(126, 68, 37);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                display: flex;
+                padding: 10px;
+                border: 1px solid #71A4B6;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+            
+            /* main container beneath menu*/
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+                border: 2px solid #71A4B6;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img{
+                width: 200px;
+                width: 300px;
+                height: 200px;
+                border: 1px solid #71A4B6;
+                -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+                animation: mymove 5s infinite;
+            }
+
+            /* Safari 4.0 - 8.0 */
+                @-webkit-keyframes mymove {
+                50% {border-top-right-radius: 150px;}
+            }
+
+                @keyframes mymove {
+                50% {border-top-right-radius: 150px;}
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>alex's amazing a-website.</header>
+                <ul>
+                    <li><a href="index.html">home.</a></li>
+                    <li><a href="portfolio.html">portfolio.</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <div class="sidebar">
+                    
+                    <img src="http://d3dyukvaoxce77.cloudfront.net/wp-content/uploads/2016/11/inthespirit.alexsiler.primitivo.elsahahne.jpg"
+                </div>
+                
+                <div class="content">
+                <header> alex siler.</header>
+                <p>student at operation spark.</p>
+                <section class="interests">
+                    <header>interests.</header>
+                    <ul>
+                        <li>making up interests.</li>
+                        <li>interesting make up.</li>
+                        <li>make up entry rests. </li>
+                    </ul>
+                </section>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
