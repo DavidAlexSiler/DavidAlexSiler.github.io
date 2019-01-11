@@ -33,7 +33,19 @@ if(i % 15 === 0){
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard() {
+function drawChessboard(i){
+// let boardSize = size;
+  let board = "";
+  for(var y = 0; y < i; y++){
+    for(let x = 0; x < i; x++){
+      if((x + y) % 2 === 0){
+        board += ' ';
+      }else{
+        board += '#';
+      }
+    }
+    board += "\n";
+  }console.log(board);
 
 }
 

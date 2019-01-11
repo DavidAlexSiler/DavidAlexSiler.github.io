@@ -2,7 +2,15 @@
 // flatten /////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function flatten() {
+function flatten(arr) {
+// let newArr = [];
+// for(let i = 0; i < arr.length; i++){
+//   for(let j = 0; j < arr[i].length; j++){
+//     newArr.push(arr[i][j]);
+//   }
+  
+  
+return arr.reduce((acc, curr) => acc.concat(curr), []);
 
 }
 

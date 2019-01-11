@@ -86,6 +86,9 @@ function getRandom(collection){
     }
     friends.push(animals[getRandom(animals)].name);
 skunk.friends = friends;
+// var randAm = animals[getRandom(animals)].name;
+// randAm.friends = friends;
+
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
