@@ -12,6 +12,7 @@ function range(start, end, step) {
   }
     }else if(start < end && step > 0){
       for(let i = start; i <= end; i += step){
+        
         rangeArr.push(i);
       }
     }else if(start < end && step < 0){

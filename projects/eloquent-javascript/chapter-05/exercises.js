@@ -18,24 +18,52 @@ return arr.reduce((acc, curr) => acc.concat(curr), []);
 // loop ////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function loop() {
-
+function loop(start, test, update, body) {
+  // It takes a value, a test function, an update function, and a body function. 
+  //Each iteration, it first runs the test function on the current loop value and stops if that returns false. 
+for (let value = start; 
+  test(value); 
+    value = update(value)) {
+  //Then it calls the body function, giving it the current value. 
+    body(value);
+  //Finally, it calls the update function to create a new value and starts from the beginning.
+  }
 }
+
 
 // /////////////////////////////////////////////////////////////////////////////
 // every ///////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function every() {
-
+function every(array, test) {
+  for(let i = 0; i < array.length; i++){
+    if(!test(array[i])){
+      return false;
+    }
+  }
+    return true;
+}
+function everySomething(array, test) {
+  return !array.some(element => !test(element));
 }
 
 // /////////////////////////////////////////////////////////////////////////////
 // dominantDirection ///////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-function dominantDirection() {
-
+function dominantDirection(string) {
+  //split string to array
+  var charArr = string.split('');
+  //loop char of arr
+  var scripts = countBy(string, char =>{
+    //return script of char
+    let script = characterScript(char.codePointAt(0));
+    return script ?  script.direction : 'none';
+  });
+  scripts.sort((a, b) => {
+    return a.count - b.count;
+  });
+  return scripts[scripts.length - 1].name;
 }
 
 // /////////////////////////////////////////////////////////////////////////////
